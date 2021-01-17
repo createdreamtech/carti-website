@@ -49,7 +49,7 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: circleci/rust:1.40-stretch
+      - image: circleci/rust:1.49-stretch
     steps:
       - checkout
       - run:
