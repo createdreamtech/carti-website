@@ -11,17 +11,13 @@ const MyApp: React.FC = () => {
     <>
       <Grid container alignContent="center" alignItems="center" justify="center" direction="column">
         <Grid container alignContent="center" alignItems="center" justify="space-around" direction="row">
-          <Grid item alignContent="center" alignItems="center" justify="center" direction="column" style={{width: "400px"}}>
-            <Typography variant="h4" gutterBottom style={{paddingBottom: "20px"}}>Design and document APIs using <b>JSON-RPC 2.0</b> and Open Source tools.</Typography>
-            <Button href="https://playground.open-rpc.org" color="primary" variant="outlined" style={{textTransform: "none"}}>Explore the Playground</Button>
-          </Grid>
           <Grid item>
-            <img className="logo" alt="logo" src={"https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png"} style={{ paddingTop: "10%" }} />
+            <img className="logo" alt="logo" src={"https://raw.githubusercontent.com/createdreamtech/carti-design/main/svg/carti-logo.svg"} style={{ paddingTop: "10%" }} />
           </Grid>
         </Grid>
-        <Typography variant="h1" style={{ paddingTop: "100px", paddingBottom: "20px" }}>What is OpenRPC?</Typography>
+        <Typography variant="h1" style={{ paddingTop: "80px", paddingBottom: "20px" }}>What is Carti?</Typography>
         <Typography gutterBottom  variant="inherit" style={{paddingBottom: "50px"}}>
-          The OpenRPC Specification defines a standard, programming language-agnostic interface description for {<Link href="https://www.jsonrpc.org/specification">JSON-RPC 2.0</Link>} APIs.
+          Carti is a decentralized package manager for Cartesi machines that makes sharing Cartesi drives and full machines easy
         </Typography>
         <Grid container justify="center">
           <Link
@@ -30,7 +26,7 @@ const MyApp: React.FC = () => {
                 {props.children}
               </GatsbyLink>
             )}>
-            <Button variant="contained" startIcon={<VideoCall />} color="primary">Watch the Webinar</Button>
+            <Button variant="contained" startIcon={<VideoCall />} color="primary">Watch the talk!</Button>
           </Link>
           <Link
             component={(props: { children: any }) => (
@@ -57,10 +53,10 @@ const MyApp: React.FC = () => {
                   <Typography variant="h6" gutterBottom color="primary">→ Beginners</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption" color="secondary">- New to OpenRPC?</Typography>
+                  <Typography variant="caption" color="secondary">- New to Carti?</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption">- Why should I care?</Typography>
+                  <Typography variant="caption">- Why use this?</Typography>
                 </Box>
               </Grid>
             </Link>
@@ -84,7 +80,7 @@ const MyApp: React.FC = () => {
                   <Typography variant="caption">- Beginner Resources</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption">- How OpenRPC works</Typography>
+                  <Typography variant="caption">- How Carti works</Typography>
                 </Box>
               </Grid>
             </Link>

@@ -2,9 +2,9 @@ const emoji = require("remark-emoji");
 
 module.exports = {
   siteMetadata: {
-    title: `OpenRPC`,
-    description: `The OpenRPC Specification defines a standard, programming language-agnostic interface description for JSON-RPC 2.0< APIs.`,
-    logoUrl: `https://raw.githubusercontent.com/open-rpc/design/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png`,
+    title: `Carti`,
+    description: `Carti: A decentralized package manager for Cartesi Machines`,
+    logoUrl: `https://raw.githubusercontent.com/createdreamtech/carti-design/main/svg/carti-logo.svg`,
     author: ``,
     primaryColor: `#3f51b5`, //material-ui primary color
     secondaryColor: `#f50057`, //material-ui secondary color
@@ -49,24 +49,8 @@ module.exports = {
         link: 'https://spec.open-rpc.org'
       },
       {
-        name: 'Playground',
-        link: 'https://playground.open-rpc.org'
-      },
-      {
-        name: 'Inspector',
-        link: 'https://inspector.open-rpc.org'
-      },
-      {
-        name: 'Twitter',
-        link: 'https://twitter.com/open_rpc'
-      },
-      {
-        name: 'Discord',
-        link: 'https://discord.gg/MWazf5n'
-      },
-      {
         name: 'Github',
-        link: 'https://github.com/open-rpc'
+        link: 'https://github.com/createdreamtech/carti'
       }
     ]
   },
@@ -75,13 +59,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `OpenRPC Website`,
-        short_name: `openrpc-site`,
+        name: `Carti Website`,
+        short_name: `carti-site`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#3f51b5`,
         display: `minimal-ui`,
-        icon: `src/images/openrpc.png`
+        icon: `src/images/carti.svg`
       },
     }
   ],
