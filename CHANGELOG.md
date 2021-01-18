@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/createdreamtech/carti-website/compare/1.0.0...1.0.1) (2021-01-18)
+
+
+### Bug Fixes
+
+* add temporary CNAME to resolve page resolution issues ([06e89bc](https://github.com/createdreamtech/carti-website/commit/06e89bca926b7db5f121c556bf9d5bc0a7822d06))
+
 # 1.0.0 (2021-01-18)
 
 
