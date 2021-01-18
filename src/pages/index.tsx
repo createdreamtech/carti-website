@@ -44,19 +44,19 @@ const MyApp: React.FC = () => {
           <Grid item container direction="column" style={{ width: "230px" }}>
             <Link
               component={(props: { children: any }) => (
-                <GatsbyLink to={"/beginners"} style={{ textDecoration: "none", color: grey[500] }} activeStyle={{ color: grey[500] }}>
+                <GatsbyLink to={"/getting-started"} style={{ textDecoration: "none", color: grey[500] }} activeStyle={{ color: grey[500] }}>
                   {props.children}
                 </GatsbyLink>
               )}>
               <Grid>
                 <Box>
-                  <Typography variant="h6" gutterBottom color="primary">→ Beginners</Typography>
+                  <Typography variant="h6" gutterBottom color="primary">→ Getting Started</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption" color="secondary">- New to Carti?</Typography>
+                  <Typography variant="caption" color="secondary">- The Basics</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption">- Why use this?</Typography>
+                  <Typography variant="caption">- Quickstart</Typography>
                 </Box>
               </Grid>
             </Link>
@@ -74,13 +74,13 @@ const MyApp: React.FC = () => {
               )}>
               <Grid>
                 <Box>
-                  <Typography variant="h6" gutterBottom color="primary">→ Learn</Typography>
+                  <Typography variant="h6" gutterBottom color="primary">→ Tutorial</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption">- Beginner Resources</Typography>
+                  <Typography variant="caption">- Overview</Typography>
                 </Box>
                 <Box>
-                  <Typography variant="caption">- How Carti works</Typography>
+                  <Typography variant="caption">- Carti World Tour!</Typography>
                 </Box>
               </Grid>
             </Link>
@@ -97,13 +97,13 @@ const MyApp: React.FC = () => {
               )}>
               <Grid>
                 <Box>
-                  <Typography variant="h6" gutterBottom color="primary">→ Developers</Typography>
+                  <Typography variant="h6" gutterBottom color="primary">→ Docs</Typography>
+                </Box>
+                <Box>
+                  <Typography variant="caption">- Main Concepts</Typography>
                 </Box>
                 <Box>
                   <Typography variant="caption">- Repository Links</Typography>
-                </Box>
-                <Box>
-                  <Typography variant="caption">- Find the latest dev tools</Typography>
                 </Box>
               </Grid>
             </Link>

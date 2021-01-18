@@ -12,7 +12,7 @@ title: OpenRPC Development | Developer guides, resources, and tools for building
 
 #### OpenRPC Tooling Foundations
 
-Need a more basic non-technical primer first? Check out [open-rpc.org/beginners](/beginners).
+Need a more basic non-technical primer first? Check out [open-rpc.org/getting-strated](/getting-started).
 
 ## Specification
 

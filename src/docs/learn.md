@@ -7,7 +7,7 @@ sidebarDepth: 0
 
 # Learn about OpenRPC
 
-**Welcome to [open-rpc.org/learn](/learn/), a set of resources to help you learn more about OpenRPC.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to OpenRPC, [we suggest you start here](/beginners/).
+**Welcome to [open-rpc.org/learn](/learn/), a set of resources to help you learn more about OpenRPC.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to OpenRPC, [we suggest you start here](/getting-started/).
 
 Here are some excellent starting points:
 - [OpenRPC Webinar](/webinar/) *open-rpc.org*

@@ -15,38 +15,31 @@ module.exports = {
         ignoreNextPrev: true
       },
       {
-        name: 'Webinar',
-        link: '/webinar'
-      },
-      {
         name: 'Getting Started',
         link: '/getting-started'
       },
       {
-        name: 'Beginners',
-        link: '/beginners'
+        name: "Main Concepts",
+        link: "/docs#concepts"
+
       },
       {
         name: 'Use',
-        link: '/use'
+        link: '/getting-started#commands'
       },
       {
-        name: 'Learn',
-        link: '/learn'
+        name: 'Tutorial',
+        link: '/tutorial'
       },
       {
-        name: 'Developers',
-        link: '/developers'
+        name: 'Docs',
+        link: '/docs'
       }
     ],
     footerLinks: [
       {
         name: 'Getting Started',
         link: '/getting-started'
-      },
-      {
-        name: 'Specification',
-        link: 'https://spec.open-rpc.org'
       },
       {
         name: 'Github',

@@ -1,5 +1,5 @@
 ---
-title: OpenRPC for beginners
+title: Carti for beginners
 lang: en-US
 ---
 
