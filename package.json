@@ -64,11 +64,11 @@
     "test": "exit 0",
     "type-check": "tsc --noEmit"
   },
-  "repository": {
+"repository": {
     "type": "git",
-    "url": "https://github.com/open-rpc/open-rpc"
+    "url": "https://github.com/createdreamtech/carti"
   },
   "bugs": {
-    "url": "https://github.com/open-rpc/open-rpc/issues"
+    "url": "https://github.com/createdreamtech/carti/issues"
   }
 }
