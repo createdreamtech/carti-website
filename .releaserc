@@ -11,10 +11,17 @@
   "verifyConditions": [
     "@semantic-release/changelog",
     "@semantic-release/git",
-    "@semantic-release/github"
+    "@semantic-release/github",
+    "@qiwi/semantic-release-gh-pages-plugin"
   ],
   "publish": [
-    "@semantic-release/github"
+    "@semantic-release/github",
+    {
+      "path": "@qiwi/semantic-release-gh-pages-plugin",
+      "msg": "github pages release",
+      "src": "public/",
+      "branch": "gh-pages"
+    }
   ],
   "success": [
     "@semantic-release/github"
