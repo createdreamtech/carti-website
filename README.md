@@ -1,5 +1,5 @@
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <p><a href="https://cartipkgr.urpkgr.com/"><img alt="open-rpc logo" src="https://raw.githubusercontent.com/createdreamtech/carti-design/main/svg/carti-logo.svg" alt="https://cartipkgr.urpkgr.com/" width="125"></a></p>
+  <p><a href="https://cartipkgr.urpkgr.com/"><img alt="carti logo" src="https://raw.githubusercontent.com/createdreamtech/carti-design/main/svg/carti-logo.svg" alt="https://cartipkgr.urpkgr.com/" width="125"></a></p>
   <p>https://cartipkgr.urpkgr.com/</p>
 </h1>
 

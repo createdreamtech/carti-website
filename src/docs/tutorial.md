@@ -1,3 +1,6 @@
+---
+title: Carti Tutorial Guide | A tour through Carti 
+---
 ## Summary
 In this tutorial we will walk you through building a cartesi machine that you publish from scratch. We'll also show what it looks for a user
 to download the machine and run it. This mirrors a bit [https://www.cartesi.io/en/docs/tutorials/calculator/cartesi-machine/](https://www.cartesi.io/en/docs/tutorials/calculator/cartesi-machine/). 

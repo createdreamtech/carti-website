@@ -1,5 +1,5 @@
 ---
-title: OpenRPC Getting Started Guide | A guide through OpenRPC
+title: Carti Getting Started Guide | A guide through Carti 
 ---
 # Getting Started
 
