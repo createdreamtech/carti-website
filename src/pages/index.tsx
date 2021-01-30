@@ -22,7 +22,7 @@ const MyApp: React.FC = () => {
         <Grid container justify="center">
           <Link
             component={(props: { children: any }) => (
-              <GatsbyLink to={"/webinar"} style={{ textDecoration: "none", color: grey[500], marginRight: "10px" }} activeStyle={{ color: grey[500] }}>
+              <GatsbyLink to={"https://youtu.be/3yXy1xynyoI"} style={{ textDecoration: "none", color: grey[500], marginRight: "10px" }} activeStyle={{ color: grey[500] }}>
                 {props.children}
               </GatsbyLink>
             )}>

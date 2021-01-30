@@ -177,7 +177,10 @@ git push origin main
 cd ..
 mkdir test-project
 cd test-project
-carti machine install https://github.com/createdreamtech/carti-sample/tree/feat/complete
+carti machine install https://github.com/createdreamtech/carti-sample/tree/feat/complete --save
+# the save command will save the carti-machine-package.json that was fetched 
+# so you can then create runscripts etc... with that context. 
+# It will overwrite existing carti-machine-package.json .
 ```
 
 ### That about wraps it up
