@@ -48,6 +48,7 @@ module.exports = {
     ]
   },
   plugins: [
+
     "@etclabscore/gatsby-theme-pristine",
     {
       resolve: `gatsby-plugin-manifest`,
@@ -60,6 +61,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/carti.svg`
       },
-    }
+    },
+
   ],
 }

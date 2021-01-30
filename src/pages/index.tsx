@@ -65,7 +65,7 @@ const MyApp: React.FC = () => {
             <Link
               component={(props: { children: any }) => (
                 <GatsbyLink
-                  to={"/learn"}
+                  to={"/tutorial"}
                   style={{ textDecoration: "none", color: grey[500] }}
                   activeStyle={{ color: grey[500] }}
                 >
@@ -88,7 +88,7 @@ const MyApp: React.FC = () => {
           <Grid item container direction="column" style={{ width: "230px" }}>
             <Link
               component={(props: { children: any }) => (
-                <GatsbyLink to={"/developers"}
+                <GatsbyLink to={"/docs"}
                   style={{ textDecoration: "none", color: grey[500] }}
                   activeStyle={{ color: grey[500] }}
                 >
