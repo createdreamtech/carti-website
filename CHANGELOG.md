@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/createdreamtech/carti-website/compare/1.0.1...1.1.0) (2021-01-30)
+
+
+### Bug Fixes
+
+* bad ref to gatsby ([921eb14](https://github.com/createdreamtech/carti-website/commit/921eb144ae8599b8fd4d7134b4e73e82aee90aea))
+* update all titles ([e706395](https://github.com/createdreamtech/carti-website/commit/e70639590339d672f27c307b6951ad38f7680029))
+
+
+### Features
+
+* rearrange pages ([47ac968](https://github.com/createdreamtech/carti-website/commit/47ac968b54a5d611834bce7b20902ad1e920c27d))
+* update readme ([8b0cb7f](https://github.com/createdreamtech/carti-website/commit/8b0cb7f32c81a6b626d781fd82ca925bdfae25ea))
+* update website with latest docs ([41e4bc0](https://github.com/createdreamtech/carti-website/commit/41e4bc03c26fe191e94e07e720ff2d7dcceb2617))
+* wip to reorganize site ([9702114](https://github.com/createdreamtech/carti-website/commit/970211405ff9d973b096e7acdc77ee1e3dcbe2b8))
+
 ## [1.0.1](https://github.com/createdreamtech/carti-website/compare/1.0.0...1.0.1) (2021-01-18)
 
 
