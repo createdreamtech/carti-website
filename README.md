@@ -1,17 +1,15 @@
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <p><a href="https://open-rpc.org"><img alt="open-rpc logo" src="https://github.com/open-rpc/design/blob/master/icons/open-rpc-logo-noText/open-rpc-logo-noText%20(PNG)/256x256.png?raw=true" alt="open-rpc.org" width="125"></a></p>
-  <p>open-rpc.org</p>
+  <p><a href="https://cartipkgr.urpkgr.com/"><img alt="open-rpc logo" src="https://raw.githubusercontent.com/createdreamtech/carti-design/main/svg/carti-logo.svg" alt="https://cartipkgr.urpkgr.com/" width="125"></a></p>
+  <p>https://cartipkgr.urpkgr.com/</p>
 </h1>
 
-This repository contains the open-rpc.org website & tooling to deploy the website.
+This repository contains the carti website & tooling to deploy the website.
 
-Need help or have a question? Join us on [Discord](https://discord.gg/gREUKuF)!
 
 ## Goals
 
 1. Knowledge Base for the community.
-2. Purpose-built to introduce new and existing users to OpenRPC.
-3. Great native-content, and minimal curated content.
+
 
 ### Contributing
 
