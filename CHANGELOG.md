@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/createdreamtech/carti-website/compare/1.1.0...1.2.0) (2021-01-30)
+
+
+### Features
+
+* add video link and additional save command into tutorial ([830d6a8](https://github.com/createdreamtech/carti-website/commit/830d6a84c5cae7782a5099e52921072107075667))
+
 # [1.1.0](https://github.com/createdreamtech/carti-website/compare/1.0.1...1.1.0) (2021-01-30)
 
 
