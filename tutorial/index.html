@@ -10,7 +10,7 @@ carti machine init
 cat carti-machine-package.json
 </code></pre></pre><h2 class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom">Create some custom drives</h2><p>Here we will be creating a custom flash drive, that will house a calculation</p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code># Pop into docker so we produce these under a consistent environment
 docker run -e USER=$(id -u -n) -e UID=$(id -u) -e GID=$(id -g) -e GROUP=$(id -g -n) \
--v $(pwd):<span style="color:#2aa198">/opt/</span>cartesi -it cartesi/playground /bin/bash
+-v $(pwd):<span style="color:#2aa198">/opt/</span>carti -it cartesi/playground /bin/bash
 # Our future input flash drive
 echo <span style="color:#2aa198">&quot;2^71 + 36^12&quot;</span> &gt; input.raw
 # size it up to be on a <span style="color:#2aa198">4</span>K size interval <span style="color:#859900">as</span> required by the cartesi machines
@@ -18,7 +18,7 @@ truncate -s <span style="color:#2aa198">4</span>K input.raw
 truncate -s <span style="color:#2aa198">4</span>K output.raw
 </code></pre></pre><h2 class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom">Let&#x27;s start adding drives to our machine</h2><p>The first thing we need to do once we have the drive is bundle it so we can use it as well as other people </p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>carti bundle -t flashdrive -n calculator-input -v <span style="color:#2aa198">0.0</span><span style="color:#2aa198">.1</span> -d <span style="color:#2aa198">&quot;calculator input&quot;</span> ./input.raw
 # outputs bundled: calculator-input <span style="color:#859900">as</span> baenrwigmw66wmp2vwjejrmmlw5sbvwpsx3zjtnd7rep4oo6wd3glahtfl4
-carti bundle -t flashdrive -n calculator-output -v <span style="color:#2aa198">0.0</span><span style="color:#2aa198">.1</span> -d <span style="color:#2aa198">&quot;calculator output&quot;</span> ./output.raw
+carti bundle -t flashdrive -n calculator-output -v <span style="color:#2aa198">0.0</span><span style="color:#2aa198">.1</span> -d <span style="color:#2aa198">&quot;calculator output&quot;</span> ./output.raw 
 # outputs bundled: calculator-output <span style="color:#859900">as</span> baenrwia5pfe7b6dvoys33k7umgsbbixgpympwcfjpqowpaye3bghmrs24m
 </code></pre></pre><p>The result should look like</p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>.
 ├── LICENSE
@@ -51,7 +51,9 @@ Currently we restrict package listing to git based endpoints, so users can add t
 npm regsitry but distributed across participants.</p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>git add bundles.json 
 git commit -m <span style="color:#2aa198">&quot;feat: add listing file to public repo&quot;</span>
 git push origin main
-</code></pre></pre><h3 class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom">Now let&#x27;s add these drives to a machine!</h3><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>cat carti-machine-package.json
+</code></pre></pre><h3 class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom">Now let&#x27;s add these drives to a machine!</h3><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>carti machine add flash --share -m output calculator-output
+carti machine add flash -m input calculator-input
+cat carti-machine-package.json
 </code></pre></pre><p>You should see this in flash drive entry</p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>    <span style="color:#2aa198">&quot;flash_drive&quot;</span>: [
       {
         <span style="color:#2aa198">&quot;cid&quot;</span>: <span style="color:#2aa198">&quot;baenrwig2hfjzzeqmozb7sws6tyxmyazvuipjp5hxamtllifsokwh73eucy&quot;</span>,
@@ -81,7 +83,7 @@ cid&#x27;s link back to bundles, which are assumed to be stored either locally o
 </code></pre></pre><h3 class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom">Build a new cartesi machine config w/ the updates</h3><p>The following will generate a cartesi machine configuration file as well as easy to use runscript that will allow you to run and store the machine</p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>carti machine build --runscript
 cat machine-config.lua
 </code></pre></pre><h3 class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom">Run the machine</h3><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>docker run -e USER=$(id -u -n) -e UID=$(id -u) -e GID=$(id -g) -e GROUP=$(id -g -n) \
--v $(pwd):<span style="color:#2aa198">/opt/</span>cartesi -it cartesi/playground /bin/bash
+-v $(pwd):<span style="color:#2aa198">/opt/</span>carti -v $(pwd)/carti_build/bundles:<span style="color:#2aa198">/opt/</span>carti/packages -it cartesi/playground /bin/bash
 cd /opt/carti; luapp5<span style="color:#2aa198">.3</span> run-config.lua machine-config
 </code></pre></pre><h3 class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom">Check the results</h3><p>Because our configuration mounts the carti_build directory as the directory for all our drives and stuff, we can see the results
 of the data output to our output drive via</p><pre><pre style="display:block;overflow-x:auto;padding:0.5em;background:#fdf6e3;color:#657b83"><code>cat carti_build/bundles/baenrwia5pfe7b6dvoys33k7umgsbbixgpympwcfjpqowpaye3bghmrs24m/output.raw
