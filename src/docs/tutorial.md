@@ -27,7 +27,7 @@ Here we will be creating a custom flash drive, that will house a calculation
 ```
 # Pop into docker so we produce these under a consistent environment
 docker run -e USER=$(id -u -n) -e UID=$(id -u) -e GID=$(id -g) -e GROUP=$(id -g -n) \
--v $(pwd):/opt/cartesi -it cartesi/playground /bin/bash
+-v $(pwd):/opt/carti -it cartesi/playground /bin/bash
 # Our future input flash drive
 echo "2^71 + 36^12" > input.raw
 # size it up to be on a 4K size interval as required by the cartesi machines
@@ -39,7 +39,7 @@ The first thing we need to do once we have the drive is bundle it so we can use 
 ```
 carti bundle -t flashdrive -n calculator-input -v 0.0.1 -d "calculator input" ./input.raw
 # outputs bundled: calculator-input as baenrwigmw66wmp2vwjejrmmlw5sbvwpsx3zjtnd7rep4oo6wd3glahtfl4
-carti bundle -t flashdrive -n calculator-output -v 0.0.1 -d "calculator output" ./output.raw
+carti bundle -t flashdrive -n calculator-output -v 0.0.1 -d "calculator output" ./output.raw 
 # outputs bundled: calculator-output as baenrwia5pfe7b6dvoys33k7umgsbbixgpympwcfjpqowpaye3bghmrs24m
 ```
 The result should look like
@@ -95,6 +95,8 @@ git push origin main
 ```
 ### Now let's add these drives to a machine!
 ```
+carti machine add flash --share -m output calculator-output
+carti machine add flash -m input calculator-input
 cat carti-machine-package.json
 ```
 You should see this in flash drive entry
@@ -147,7 +149,7 @@ cat machine-config.lua
 ### Run the machine
 ```
 docker run -e USER=$(id -u -n) -e UID=$(id -u) -e GID=$(id -g) -e GROUP=$(id -g -n) \
--v $(pwd):/opt/cartesi -it cartesi/playground /bin/bash
+-v $(pwd):/opt/carti -v $(pwd)/carti_build/bundles:/opt/carti/packages -it cartesi/playground /bin/bash
 cd /opt/carti; luapp5.3 run-config.lua machine-config
 ```
 ### Check the results
