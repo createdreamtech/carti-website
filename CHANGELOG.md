@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/createdreamtech/carti-website/compare/1.2.0...1.2.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* correct typos and missing commands for tutorial ([979cfb8](https://github.com/createdreamtech/carti-website/commit/979cfb8571541bcea99a3eb0428d62165aa676b4))
+
 # [1.2.0](https://github.com/createdreamtech/carti-website/compare/1.1.0...1.2.0) (2021-01-30)
 
 
